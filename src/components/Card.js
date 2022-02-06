@@ -124,10 +124,10 @@ function Card({
         bg="#fff"
         style={{ boxShadow: '-20px 20px 60px #bebebe' }}
         p={3}
-        w="40vw"
+        w={["90vw","90vw","40vw","40vw"]}
       >
         <Box d="flex" alignItems="center" justifyContent="space-between" mx="5">
-          <Text fontSize="2xl">Temperature</Text>
+          <Text fontSize={['lg', 'lg', '2xl', '2xl']}>Temperature</Text>
           {rule ? (
             <BsFillBellFill color="black.500" onClick={onOpen} />
           ) : (
@@ -135,10 +135,10 @@ function Card({
           )}
         </Box>
 
-        <Text fontSize="9xl" mt="-5" color={'#2d3340'}>
+        <Text fontSize={['4xl', '6xl', '8xl', '9xl']} mt="-2" color={'#2d3340'}>
           {messages ? messages.temperature : '0'}°
         </Text>
-        <Text textAlign={'center'} mt="-5" fontSize={'4xl'}>
+        <Text textAlign={'center'} mt="-1" fontSize={['xl', '2xl', '3xl', '4xl']}>
           Celsius
         </Text>
       </Box>

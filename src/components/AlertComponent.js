@@ -12,7 +12,7 @@ function AlertComponent({ alertData, setAlertData,setAlert }) {
         bg="#fff"
         style={{ boxShadow: '-20px 20px 60px #bebebe' }}
         p={3}
-        w="40vw"
+        w={["90vw","90vw","40vw","40vw"]}
         mt="5"
         h="45vh"
         overflowY={'scroll'}
@@ -37,12 +37,12 @@ function AlertComponent({ alertData, setAlertData,setAlert }) {
 
         {alertData.map(data => (
           <Box m="5" border="0.2px solid gray" borderRadius="md" p="2">
-            <Text textAlign={'left'} fontSize="xs">
+            <Text textAlign={'left'} fontSize="xs" fontWeight="light">
               Alert triggered
             </Text>
-            <Box d="flex" justifyContent="space-between">
-              <Text fontSize="md">{data.message}</Text>
-              <Text fontSize="md">@ {data.time.toString()}</Text>
+            <Box d="flex" justifyContent="space-between" flexDir={["column",'column','column','row']}>
+              <Text fontSize={['sm', 'sm', 'md', 'md']} fontWeight="semibold">{data.message}</Text>
+              <Text fontSize={['sm', 'sm', 'md', 'md']}>@ {data.time.toString()}</Text>
             </Box>
           </Box>
         ))}

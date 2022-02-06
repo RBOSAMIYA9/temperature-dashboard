@@ -10,9 +10,9 @@ function DeviceInfo({ deviceStatus, mqttStatus }) {
         d="flex"
         justifyContent="space-between"
         p={3}
-        w="40vw"
+        w={['90vw', '90vw', '40vw', '40vw']}
         mt="2"
-        fontSize="md"
+        fontSize={['xs', 'xs', 'lg', 'lg']}
       >
         <Box d="flex" alignItems="center">
           <Text mx="2"> Mqtt Status: </Text>
@@ -25,7 +25,10 @@ function DeviceInfo({ deviceStatus, mqttStatus }) {
           </Text>
         </Box>
         <Box d="flex" alignItems="center">
-          <Text mx="2"> Device Status: </Text>
+          <Text mx="2" >
+            
+            Device Status:
+          </Text>
           <BsCircleFill
             size={15}
             color={deviceStatus === true ? 'teal' : 'tomato'}
